@@ -2,6 +2,7 @@
 <!-- badges: start -->
 
 ![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge&logo=github)
+[![PyPI](https://img.shields.io/pypi/v/cfbfastR-py?label=cfbfastr-py&logo=python&style=for-the-badge)](https://pypi.org/project/cfbfastR-py/)
 ![Contributors](https://img.shields.io/github/contributors/saiemgilani/cfbfastR-py?style=for-the-badge)
 [![Twitter
 Follow](https://img.shields.io/twitter/follow/cfbfastR?color=blue&label=%40cfbfastR&logo=twitter&style=for-the-badge)](https://twitter.com/cfbfastR)
