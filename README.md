@@ -43,7 +43,7 @@ To cite the [**`cfbfastR-py`**](https://saiemgilani.github.io/cfbfastR-py/) Pyth
 
 BibTex Citation
 ```bibtex
-@misc{saiemgilani2021hoopR,
+@misc{saiemgilani2021cfbfastRpy,
   author = {Gilani, Saiem},
   title = {cfbfastR-py: The SportsDataverse's Python Package for College Football Data.},
   url = {https://saiemgilani.github.io/cfbfastR-py/},
