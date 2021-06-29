@@ -47,6 +47,6 @@ BibTex Citation
   author = {Gilani, Saiem},
   title = {cfbfastR-py: The SportsDataverse's Python Package for College Football Data.},
   url = {https://saiemgilani.github.io/cfbfastR-py/},
-  year = {2021}
+  season = {2021}
 }
 ```

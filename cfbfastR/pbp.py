@@ -403,7 +403,6 @@ class PlayProcess(object):
         homeTeamNameAlt = re.sub("Stat(.+)", "St", str(homeTeamName))
         awayTeamNameAlt = re.sub("Stat(.+)", "St", str(awayTeamName))
 
-        
         if len(pbp_txt['pickcenter']) > 1:
             if 'spread' in pbp_txt['pickcenter'][1].keys():
                 gameSpread =  pbp_txt['pickcenter'][1]['spread']
@@ -472,7 +471,7 @@ class PlayProcess(object):
                     pbp_txt['plays'] = pd.concat([curr_drives, prev_drives], ignore_index=True)
                 else:
                     pbp_txt['plays'] = prev_drives
-                
+
                 pbp_txt['plays']['season'] = pbp_txt['header']['season']['year']
                 pbp_txt['plays']['seasonType'] = pbp_txt['header']['season']['type']
                 pbp_txt['plays']["awayTeamId"] = awayTeamId
