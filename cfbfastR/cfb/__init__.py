@@ -10,7 +10,7 @@ def load_cfb_pbp(seasons: List[int]) -> pd.DataFrame:
     """Load college football play by play data going back to 2003
 
     Example:
-        `cfb_df = cfbfastR.cfb.load_cfb_pbp(seasons=[range(2003,2021)])`
+        `cfb_df = cfbfastR.cfb.load_cfb_pbp(seasons=range(2003,2021))`
 
     Args:
         seasons (list): Used to define different seasons. 2003 is the earliest available season.
@@ -36,7 +36,7 @@ def load_cfb_schedule(seasons: List[int]) -> pd.DataFrame:
     """Load college football schedule data
 
     Example:
-        `cfb_df = cfbfastR.cfb.load_cfb_schedule(seasons=[range(2002,2021)])`
+        `cfb_df = cfbfastR.cfb.load_cfb_schedule(seasons=range(2002,2021))`
 
     Args:
         seasons (list): Used to define different seasons. 2002 is the earliest available season.
@@ -63,7 +63,7 @@ def load_cfb_rosters(seasons: List[int]) -> pd.DataFrame:
     """Load roster data
 
     Example:
-        `cfb_df = cfbfastR.cfb.load_cfb_rosters(seasons=[range(2014,2021)])`
+        `cfb_df = cfbfastR.cfb.load_cfb_rosters(seasons=range(2014,2021))`
 
     Args:
         seasons (list): Used to define different seasons. 2014 is the earliest available season.
@@ -90,7 +90,7 @@ def load_cfb_team_info(seasons: List[int]) -> pd.DataFrame:
     """Load college football team info
 
     Example:
-        `cfb_df = cfbfastR.cfb.load_cfb_team_info(seasons=[range(2002,2021)])`
+        `cfb_df = cfbfastR.cfb.load_cfb_team_info(seasons=range(2002,2021))`
 
     Args:
         seasons (list): Used to define different seasons. 2002 is the earliest available season.
