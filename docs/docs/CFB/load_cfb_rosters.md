@@ -8,7 +8,7 @@ Load roster data
 
 Example:
 
-    cfb_df = cfbfastR.cfb.load_cfb_rosters(seasons=[range(2014,2021)])
+    cfb_df = cfbfastR.cfb.load_cfb_rosters(seasons=range(2014,2021))
 
 Args:
 

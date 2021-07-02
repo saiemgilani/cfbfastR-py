@@ -8,7 +8,7 @@ Load college football team info
 
 Example:
 
-    cfb_df = cfbfastR.cfb.load_cfb_team_info(seasons=[range(2002,2021)])
+    cfb_df = cfbfastR.cfb.load_cfb_team_info(seasons=range(2002,2021))
 
 
 Args:
