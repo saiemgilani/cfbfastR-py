@@ -1,6 +1,7 @@
 ---
 title: CFB Teams
 sidebar_label: CFB Teams
+sidebar_position: 6
 ---
 
 ### cfbfastR.cfb.cfb_teams()

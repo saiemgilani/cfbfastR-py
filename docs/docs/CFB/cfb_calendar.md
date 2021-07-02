@@ -1,6 +1,7 @@
 ---
 title: CFB Calendar
 sidebar_label: CFB Calendar
+sidebar_position: 7
 ---
 
 ### cfbfastR.cfb.cfb_calendar(season: int)

@@ -8,7 +8,7 @@ Load men’s college football play by play data going back to 2003
 
 Example:
 
-    cfb_df = cfbfastR.cfb.load_cfb_pbp(seasons=range(2003,2022))
+    cfb_df = cfbfastR.cfb.load_cfb_pbp(seasons=range(2003,2021))
 
 Args:
 

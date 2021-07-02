@@ -1,6 +1,7 @@
 ---
 title: Load CFB Team Info
 sidebar_label: Load CFB Team Info
+sidebar_position: 3
 ---
 
 ### cfbfastR.cfb.load_cfb_team_info(seasons: List[int])

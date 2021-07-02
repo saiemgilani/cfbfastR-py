@@ -1,6 +1,7 @@
 ---
 title: Load CFB Rosters
 sidebar_label: Load CFB Rosters
+sidebar_position: 4
 ---
 
 ### cfbfastR.cfb.load_cfb_rosters(seasons: List[int])
