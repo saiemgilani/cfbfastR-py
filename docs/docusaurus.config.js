@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'cfbfastR-py',
   tagline: "The SportsDataverse's Python Package for College Football Data.",
-  url: 'https://cfbfastR-py.sportsdataverse.org',
+  url: 'https://cfbfastr-py.sportsdataverse.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

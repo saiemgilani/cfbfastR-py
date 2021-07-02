@@ -36,7 +36,7 @@ cd cfbfastR-py
 pip install -e .
 ```
 
-# **Our Authors**
+## **Our Authors**
 
 -   [Saiem Gilani](https://twitter.com/saiemgilani)
 
