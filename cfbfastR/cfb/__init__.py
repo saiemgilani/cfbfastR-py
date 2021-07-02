@@ -89,6 +89,9 @@ def load_cfb_rosters(seasons: List[int]) -> pd.DataFrame:
 def load_cfb_team_info(seasons: List[int]) -> pd.DataFrame:
     """Load college football team info
 
+    Example:
+        `cfb_df = cfbfastR.cfb.load_cfb_team_info(seasons=[range(2002,2021)])`
+
     Args:
         seasons (list): Used to define different seasons. 2002 is the earliest available season.
 
