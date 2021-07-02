@@ -1,8 +1,10 @@
-# cfbfastR package
+# cfbfastR.cfb package
 
 ## Submodules
 
-## cfbfastR.cfb module
+## cfbfastR.cfb.pbp module
+
+## Module contents
 
 
 ### cfbfastR.cfb.cfb_calendar(season: int)
@@ -109,23 +111,3 @@ Returns:
 Raises:
 
     ValueError: If season is less than 2002.
-
-## cfbfastR.config module
-
-## cfbfastR.dl_utils module
-
-
-### cfbfastR.dl_utils.download(url, num_retries=5)
-## cfbfastR.errors module
-
-Custom exceptions for cfbfastR module
-
-
-### exception cfbfastR.errors.SeasonNotFoundError()
-Bases: `Exception`
-
-## cfbfastR.pbp module
-
-## cfbfastR.schedule module
-
-## Module contents

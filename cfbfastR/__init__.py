@@ -1,2 +1,1 @@
-from .cfb import *
-from .schedule import *
+from cfbfastR.cfb import *

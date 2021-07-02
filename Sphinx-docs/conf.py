@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'cfbfastR-py'
+project = 'cfbfastR'
 copyright = '2021, Saiem Gilani'
 author = 'Saiem Gilani'
 
@@ -68,3 +68,14 @@ html_static_path = ['_static']
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+import os
+import sys
+sys.path.insert(0,os.path.abspath('../'))
+def skip(app, what, name, obj,would_skip, options):
+    if name in ( '__init__',):
+        return False
+    return would_skip
+def setup(app):
+    app.connect('autodoc-skip-member', skip)
+
