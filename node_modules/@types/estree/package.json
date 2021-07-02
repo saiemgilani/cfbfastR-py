@@ -1,0 +1,25 @@
+{
+    "name": "@types/estree",
+    "version": "0.0.49",
+    "description": "TypeScript definitions for ESTree AST specification",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/estree",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "RReverser",
+            "url": "https://github.com/RReverser",
+            "githubUsername": "RReverser"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/estree"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typesPublisherContentHash": "0a455b36fbd9e3f4bb9627b688c4dc2354b664c4ca558ca6de6d024fe2210168",
+    "typeScriptVersion": "3.6"
+}
