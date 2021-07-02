@@ -4,7 +4,7 @@ sidebar_label: Getting Started
 sidebar_position: 1
 ---
 
-## cfbfastR-py
+## **cfbfastR-py**
 <!-- badges: start -->
 
 ![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg?style=for-the-badge&logo=github)
@@ -20,7 +20,7 @@ See [CHANGELOG.md](https://cfbfastR-py.sportsdataverse.org/CHANGELOG) for detail
 
 The goal of [cfbfastR-py](https://cfbfastR-py.sportsdataverse.org) is to provide the community with a python package for working with CFB data as a companion to the [cfbfastR](https://saiemgilani.github.io/cfbfastR) R package. Beyond data aggregation and tidying ease, one of the multitude of services that [cfbfastR-py](https://cfbfastR-py.sportsdataverse.org) provides is for benchmarking open-source expected points and win probability metrics.
 
-## Installation
+## **Installation**
 
 cfbfastR-py can be installed via pip:
 
