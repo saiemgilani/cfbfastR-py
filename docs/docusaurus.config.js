@@ -75,8 +75,8 @@ module.exports = {
               href: 'https://saiemgilani.github.io/wehoop/',
             },
             {
-              label: 'cfbrecruitR',
-              href: 'https://saiemgilani.github.io/cfbrecruitR/',
+              label: 'recruitR',
+              href: 'https://saiemgilani.github.io/recruitR/',
             },
             {
               label: 'puntr',
