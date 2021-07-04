@@ -45,7 +45,7 @@ module.exports = {
           position: 'left',
           items: [
             {
-              href: 'https://sportsdataverse.org',
+              to: 'https://sportsdataverse.org',
               label: 'SportsDataverse',
             },
             {
@@ -53,38 +53,38 @@ module.exports = {
             },
             {
               label: 'hoopR-py',
-              href: 'https://hoopR-py.sportsdataverse.org/',
+              to: 'https://hoopR-py.sportsdataverse.org/',
             },
             {
               label: 'wehoop-py',
-              href: 'https://wehoop-py.sportsdataverse.org/',
+              to: 'https://wehoop-py.sportsdataverse.org/',
             },
             {
               label: 'R Packages',
             },
             {
               label: 'cfbfastR',
-              href: 'https://saiemgilani.github.io/cfbfastR/',
+              to: 'https://saiemgilani.github.io/cfbfastR/',
             },
             {
               label: 'hoopR',
-              href: 'https://saiemgilani.github.io/hoopR/',
+              to: 'https://saiemgilani.github.io/hoopR/',
             },
             {
               label: 'wehoop',
-              href: 'https://saiemgilani.github.io/wehoop/',
+              to: 'https://saiemgilani.github.io/wehoop/',
             },
             {
               label: 'recruitR',
-              href: 'https://saiemgilani.github.io/recruitR/',
+              to: 'https://saiemgilani.github.io/recruitR/',
             },
             {
               label: 'puntr',
-              href: 'https://puntalytics.github.io/puntr/',
+              to: 'https://puntalytics.github.io/puntr/',
             },
             {
               label: 'gamezoneR',
-              href: 'https://jacklich10.github.io/gamezoneR/',
+              to: 'https://jacklich10.github.io/gamezoneR/',
             },
           ],
         },
