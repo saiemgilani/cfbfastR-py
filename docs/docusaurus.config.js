@@ -45,46 +45,55 @@ module.exports = {
           position: 'left',
           items: [
             {
-              to: 'https://sportsdataverse.org',
+              href: 'https://sportsdataverse.org',
               label: 'SportsDataverse',
+              target: '_self',
             },
             {
               label: 'Python Packages',
             },
             {
               label: 'hoopR-py',
-              to: 'https://hoopR-py.sportsdataverse.org/',
+              href: 'https://hoopR-py.sportsdataverse.org/',
+              target: '_self',
             },
             {
               label: 'wehoop-py',
-              to: 'https://wehoop-py.sportsdataverse.org/',
+              href: 'https://wehoop-py.sportsdataverse.org/',
+              target: '_self',
             },
             {
               label: 'R Packages',
             },
             {
               label: 'cfbfastR',
-              to: 'https://saiemgilani.github.io/cfbfastR/',
+              href: 'https://saiemgilani.github.io/cfbfastR/',
+              target: '_self',
             },
             {
               label: 'hoopR',
-              to: 'https://saiemgilani.github.io/hoopR/',
+              href: 'https://saiemgilani.github.io/hoopR/',
+              target: '_self',
             },
             {
               label: 'wehoop',
-              to: 'https://saiemgilani.github.io/wehoop/',
+              href: 'https://saiemgilani.github.io/wehoop/',
+              target: '_self',
             },
             {
               label: 'recruitR',
-              to: 'https://saiemgilani.github.io/recruitR/',
+              href: 'https://saiemgilani.github.io/recruitR/',
+              target: '_self',
             },
             {
               label: 'puntr',
-              to: 'https://puntalytics.github.io/puntr/',
+              href: 'https://puntalytics.github.io/puntr/',
+              target: '_self',
             },
             {
               label: 'gamezoneR',
-              to: 'https://jacklich10.github.io/gamezoneR/',
+              href: 'https://jacklich10.github.io/gamezoneR/',
+              target: '_self',
             },
           ],
         },
