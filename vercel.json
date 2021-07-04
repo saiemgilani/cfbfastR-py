@@ -1,5 +1,5 @@
 {
-    "redirects": [
+    "rewrites": [
         { "source": "https://cfbfastR-py.sportsdataverse.org/(.*)", "destination": "https://sportsdataverse.org/cfbfastR-py/(.*)" }
     ]
 }
