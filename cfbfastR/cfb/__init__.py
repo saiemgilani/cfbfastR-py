@@ -25,8 +25,7 @@ def load_cfb_pbp(seasons: List[int]) -> pd.DataFrame:
     for i in seasons:
         if int(i) < 2003:
             raise SeasonNotFoundError("season cannot be less than 2003")
-        i_data = pd.read_parquet(CFB_BASE_URL.format(season=i), engine='auto', columns=None, 
-        use_nullable_dtypes=False)
+        i_data = pd.read_parquet(CFB_BASE_URL.format(season=i), engine='auto', columns=None)
         data = data.append(i_data)
     #Give each row a unique index
     data.reset_index(drop=True, inplace=True)
@@ -51,8 +50,7 @@ def load_cfb_schedule(seasons: List[int]) -> pd.DataFrame:
     for i in seasons:
         if int(i) < 2002:
             raise SeasonNotFoundError("season cannot be less than 2002")
-        i_data = pd.read_parquet(CFB_TEAM_SCHEDULE_URL.format(season = i), engine='auto', columns=None, 
-        use_nullable_dtypes=False)
+        i_data = pd.read_parquet(CFB_TEAM_SCHEDULE_URL.format(season = i), engine='auto', columns=None)
         data = data.append(i_data)
     #Give each row a unique index
     data.reset_index(drop=True, inplace=True)
@@ -78,8 +76,7 @@ def load_cfb_rosters(seasons: List[int]) -> pd.DataFrame:
     for i in seasons:
         if int(i) < 2014:
             raise SeasonNotFoundError("season cannot be less than 2014")
-        i_data = pd.read_parquet(CFB_ROSTER_URL.format(season = i), engine='auto', columns=None, 
-        use_nullable_dtypes=False)
+        i_data = pd.read_parquet(CFB_ROSTER_URL.format(season = i), engine='auto', columns=None)
         data = data.append(i_data)
     #Give each row a unique index
     data.reset_index(drop=True, inplace=True)
@@ -105,8 +102,7 @@ def load_cfb_team_info(seasons: List[int]) -> pd.DataFrame:
     for i in seasons:
         if int(i) < 2002:
             raise SeasonNotFoundError("season cannot be less than 2002")
-        i_data = pd.read_parquet(CFB_ROSTER_URL.format(season = i), engine='auto', columns=None, 
-        use_nullable_dtypes=False)
+        i_data = pd.read_parquet(CFB_ROSTER_URL.format(season = i), engine='auto', columns=None)
         data = data.append(i_data)
     #Give each row a unique index
     data.reset_index(drop=True, inplace=True)
