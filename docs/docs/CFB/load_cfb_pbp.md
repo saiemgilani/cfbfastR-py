@@ -1,6 +1,7 @@
 ---
 title: Load CFB PBP
 sidebar_label: Load CFB PBP
+sidebar_position: 2
 ---
 
 ### cfbfastR.cfb.load_cfb_pbp(seasons: List[int])
