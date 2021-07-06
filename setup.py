@@ -21,7 +21,7 @@ setup(
     # https://packaging.python.org/en/latest/single_source_version.html
     version='0.0.9',
 
-    description='Retrieve college football data in Python',
+    description='Retrieve American football data in Python',
     long_description=long_description,
     long_description_content_type="text/markdown",
     # The project's main homepage.
@@ -66,7 +66,7 @@ setup(
     ],
 
     # What does your project relate to?
-    keywords='college football data epa statistics web scraping',
+    keywords='nfl college football data epa statistics web scraping',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
