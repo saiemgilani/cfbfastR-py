@@ -22,6 +22,8 @@ def load_nfl_pbp(seasons: List[int]) -> pd.DataFrame:
         ValueError: If `season` is less than 1999.
     """
     data = pd.DataFrame()
+    if type(seasons) is int:
+        seasons = [seasons]
     for i in seasons:
         if int(i) < 1999:
             raise SeasonNotFoundError("season cannot be less than 1999")
@@ -47,6 +49,8 @@ def load_nfl_schedule(seasons: List[int]) -> pd.DataFrame:
         ValueError: If `season` is less than 1999.
     """
     data = pd.DataFrame()
+    if type(seasons) is int:
+        seasons = [seasons]
     for i in seasons:
         if int(i) < 1999:
             raise SeasonNotFoundError("season cannot be less than 1999")
@@ -92,6 +96,8 @@ def load_nfl_rosters(seasons: List[int]) -> pd.DataFrame:
         ValueError: If `season` is less than 1999.
     """
     data = pd.DataFrame()
+    if type(seasons) is int:
+        seasons = [seasons]
     for i in seasons:
         if int(i) < 1999:
             raise SeasonNotFoundError("season cannot be less than 1999")

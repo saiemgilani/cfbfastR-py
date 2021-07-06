@@ -22,6 +22,8 @@ def load_cfb_pbp(seasons: List[int]) -> pd.DataFrame:
         ValueError: If `season` is less than 2003.
     """
     data = pd.DataFrame()
+    if type(seasons) is int:
+        seasons = [seasons]
     for i in seasons:
         if int(i) < 2003:
             raise SeasonNotFoundError("season cannot be less than 2003")
@@ -47,6 +49,8 @@ def load_cfb_schedule(seasons: List[int]) -> pd.DataFrame:
         ValueError: If `season` is less than 2002.
     """
     data = pd.DataFrame()
+    if type(seasons) is int:
+        seasons = [seasons]
     for i in seasons:
         if int(i) < 2002:
             raise SeasonNotFoundError("season cannot be less than 2002")
@@ -73,6 +77,8 @@ def load_cfb_rosters(seasons: List[int]) -> pd.DataFrame:
         ValueError: If `season` is less than 2014.
     """
     data = pd.DataFrame()
+    if type(seasons) is int:
+        seasons = [seasons]
     for i in seasons:
         if int(i) < 2014:
             raise SeasonNotFoundError("season cannot be less than 2014")
@@ -99,6 +105,8 @@ def load_cfb_team_info(seasons: List[int]) -> pd.DataFrame:
         ValueError: If `season` is less than 2002.
     """
     data = pd.DataFrame()
+    if type(seasons) is int:
+        seasons = [seasons]
     for i in seasons:
         if int(i) < 2002:
             raise SeasonNotFoundError("season cannot be less than 2002")

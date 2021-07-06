@@ -8,7 +8,7 @@ Load roster data
 
 Example:
 
-    nfl_df = cfbfastR.nfl.load_nfl_rosters(seasons=range(2014,2021))
+    nfl_df = cfbfastR.nfl.load_nfl_rosters(seasons=range(1999,2021))
 
 Args:
 
