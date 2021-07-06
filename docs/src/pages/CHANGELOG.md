@@ -1,4 +1,5 @@
-## 0.0.9 Release: July 6, 2021
+## 0.0.10 Release: July 6, 2021
+- Fix list/int arguments to accept either.
 
 ### Add nflfastR data functions
 
