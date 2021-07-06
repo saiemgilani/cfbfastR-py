@@ -150,7 +150,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/saiemgilani/hoopR/edit/master/website/',
+            'https://github.com/saiemgilani/cfbfastR-py/edit/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

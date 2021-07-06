@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="The SportsDataverse's Python Package for College Football Data.">
+      description="The SportsDataverse's Python Package for American Football Data.">
       <HomepageHeader />
       <main>
         <section className={styles.features}>
