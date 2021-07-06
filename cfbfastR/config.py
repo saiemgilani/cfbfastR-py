@@ -1,5 +1,11 @@
 CFB_BASE_URL = 'https://raw.githubusercontent.com/saiemgilani/cfbfastR-data/master/pbp/parquet/play_by_play_{season}.parquet'
-CFB_ROSTER_URL = 'https://raw.githubusercontent.com/saiemgilani/cfbfastR-data/master/rosters/roster_{season}.parquet?raw=True'
+CFB_ROSTER_URL = 'https://raw.githubusercontent.com/saiemgilani/cfbfastR-data/master/rosters/roster_{season}.parquet'
 CFB_TEAM_LOGO_URL  = 'https://github.com/saiemgilani/cfbfastR-data/blob/master/teams_colors_logos.csv'
 CFB_TEAM_SCHEDULE_URL = 'https://raw.githubusercontent.com/saiemgilani/cfbfastR-data/master/schedules/parquet/schedules_{season}.parquet'
 CFB_TEAM_INFO_URL = 'https://raw.githubusercontent.com/saiemgilani/cfbfastR-data/master/team_info/parquet/team_info_{season}.parquet'
+
+NFL_BASE_URL = 'https://raw.githubusercontent.com/nflverse/nflfastR-data/master/data/play_by_play_{season}.parquet'
+NFL_PLAYER_STATS_URL = 'https://raw.githubusercontent.com/nflverse/nflfastR-data/master/data/player_stats.parquet'
+NFL_ROSTER_URL = 'https://raw.githubusercontent.com/nflverse/nflfastR-roster/master/data/seasons/roster_{season}.csv'
+NFL_TEAM_LOGO_URL  = 'https://github.com/nflverse/nflfastR-data/blob/master/teams_colors_logos.csv'
+NFL_TEAM_SCHEDULE_URL = 'https://raw.githubusercontent.com/saiemgilani/nflfastR-data/master/schedules/sched_{season}.parquet'

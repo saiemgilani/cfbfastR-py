@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'cfbfastR-py',
-  tagline: "The SportsDataverse's Python Package for College Football Data.",
+  tagline: "The SportsDataverse's Python Package for American Football Data.",
   url: 'https://cfbfastr-py.sportsdataverse.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',

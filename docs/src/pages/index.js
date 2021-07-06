@@ -28,6 +28,16 @@ const FeatureList = [
       </>
     ),
   },
+  {
+    title: 'NFL',
+    // Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        It provides users with the capability to access the nflfastR team's
+        game play-by-plays, box scores, and schedules to analyze the data for themselves.
+      </>
+    ),
+  },
 ];
 
 function Feature({ imageUrl, title, description }) {

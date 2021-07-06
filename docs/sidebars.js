@@ -26,6 +26,17 @@
         'CFB/cfb_calendar',
       ],
     },
+    {
+      type: 'category',
+      label: 'NFL',
+      items: [
+        'NFL/load_nfl_pbp',
+        'NFL/load_nfl_player_stats',
+        'NFL/load_nfl_rosters',
+        'NFL/load_nfl_schedule',
+        'NFL/nfl_teams',
+      ],
+    },
   ],
   // But you can create a sidebar manually
   /*
