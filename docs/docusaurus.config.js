@@ -72,12 +72,12 @@ module.exports = {
             },
             {
               label: 'hoopR',
-              href: 'https://saiemgilani.github.io/hoopR/',
+              href: 'https://hoopR.sportsdataverse.org/',
               target: '_self',
             },
             {
               label: 'wehoop',
-              href: 'https://saiemgilani.github.io/wehoop/',
+              href: 'https://wehoop.sportsdataverse.org/',
               target: '_self',
             },
             {
@@ -150,7 +150,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/saiemgilani/cfbfastR-py/edit/master/website/',
+            'https://github.com/saiemgilani/cfbfastR-py/edit/master/docs/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
