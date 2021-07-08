@@ -50,6 +50,9 @@ module.exports = {
               target: '_self',
             },
             {
+              label: '---------------',
+            },
+            {
               label: 'Python Packages',
             },
             {
@@ -61,6 +64,9 @@ module.exports = {
               label: 'wehoop-py',
               href: 'https://wehoop-py.sportsdataverse.org/',
               target: '_self',
+            },
+            {
+              label: '---------------',
             },
             {
               label: 'R Packages',
