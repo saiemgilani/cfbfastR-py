@@ -23,7 +23,7 @@ module.exports = {
     image: 'img/cfbfastR-py-gh.png',
     navbar: {
       hideOnScroll: true,
-      // title: 'cfbfastR-py',
+      title: 'cfbfastR-py',
       logo: {
         alt: 'cfbfastR Logo',
         src: 'img/logo.ico',
