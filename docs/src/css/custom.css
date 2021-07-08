@@ -51,7 +51,7 @@ body {
   font-weight: 500;
   font-size: 14px;
 }
-.code{
+pre .code{
   font-family: "Fira Mono";
   line-height: 1.8rem; /* increases, so wrapping headers don't overlap */
   font-weight: 500;
