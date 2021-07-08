@@ -42,7 +42,7 @@ html[data-theme='light'] .navbar__title {
 body {
   font-family: "Lato";
   /*color: #1f1f1f;*/
-  font-size: 16px;
+  font-size: 18px;
 }
 .menu__link{
   font-family: "Fira Mono";
@@ -62,7 +62,7 @@ h1, h2, .h1, .h2 {
   letter-spacing: 0.6px;
   line-height: 1.2rem; /* increases, so wrapping headers don't overlap */
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h3, h4, h5, h6, .h3, .h4{
@@ -70,14 +70,14 @@ h3, h4, h5, h6, .h3, .h4{
   letter-spacing: 0.6px;
   line-height: 1.8rem; /* increases, so wrapping headers don't overlap */
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 .navbar__item.navbar__link,.navbar__link.navbar__link--active.navbar__link--active{
   font-family: "Fira Mono";
   letter-spacing: 0.6px;
   line-height: 1.8rem; /* increases, so wrapping headers don't overlap */
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 pre, code {
   font-family: "Fira Mono", Consolas, Inconsolata, monospace;
