@@ -51,11 +51,11 @@ body {
   font-weight: 500;
   font-size: 14px;
 }
-pre .code{
+pre.code, span.token{
   font-family: "Fira Mono";
   line-height: 1.8rem; /* increases, so wrapping headers don't overlap */
   font-weight: 500;
-  font-size: 11px;
+  font-size: 13px;
 }
 h1, h2, .h1, .h2 {
   font-family: "Chivo";
@@ -200,7 +200,7 @@ button,
 }
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #611409;
+  --ifm-color-primary: #861706;
   --ifm-color-primary-dark:	hsl(8, 100%, 41%);
   --ifm-color-primary-darker: hsl(8, 94%, 46%);
   --ifm-color-primary-darkest: hsl(8, 98%, 48%);
@@ -221,7 +221,7 @@ button,
 }
 
 html[data-theme='dark'] {
-  --ifm-color-primary: #611409;
+  --ifm-color-primary: #861706;
 }
 
 .docusaurus-highlight-code-line {
