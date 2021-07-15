@@ -1,3 +1,6 @@
+## 0.0.11 Release: July 15, 2021
+- Fix `load_cfb_team_info()` function to pull the appropriate data.
+
 ## 0.0.10 Release: July 6, 2021
 - Fix list/int arguments to accept either.
 
