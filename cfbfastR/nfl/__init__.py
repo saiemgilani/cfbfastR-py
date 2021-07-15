@@ -119,5 +119,5 @@ def nfl_teams() -> pd.DataFrame:
     Returns:
         pd.DataFrame: Pandas dataframe containing teams available for the requested seasons.
     """
-    df = pd.read_csv(NFL_TEAM_LOGO_URL)
+    df = pd.read_csv(NFL_TEAM_LOGO_URL, low_memory=False)
     return df

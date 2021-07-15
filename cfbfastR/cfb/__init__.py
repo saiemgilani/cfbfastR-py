@@ -128,7 +128,7 @@ def cfb_teams() -> pd.DataFrame:
     Returns:
         pd.DataFrame: Pandas dataframe containing teams available for the requested seasons.
     """
-    df = pd.read_csv(CFB_TEAM_LOGO_URL)
+    df = pd.read_parquet(CFB_TEAM_LOGO_URL, engine='auto', columns=None)
     return df
 
 def cfb_calendar(season: int) -> pd.DataFrame:
