@@ -1,3 +1,6 @@
+## 0.0.12 Release: August 6, 2021
+- A tragic spelling error corrected in `load_cfb_rosters()` was corrected.
+
 ## 0.0.11 Release: July 15, 2021
 - Fix `load_cfb_team_info()` function to pull the appropriate data.
 
