@@ -1,3 +1,6 @@
+## 0.0.13 Release: September 28, 2021
+- A corrected link and method for `load_nfl_rosters()`, no seasons argument anymore.
+
 ## 0.0.12 Release: August 6, 2021
 - A tragic spelling error corrected in `load_cfb_rosters()` was corrected.
 

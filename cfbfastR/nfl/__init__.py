@@ -89,8 +89,6 @@ def load_nfl_rosters() -> pd.DataFrame:
     Returns:
         pd.DataFrame: Pandas dataframe containing rosters available for the requested seasons.
 
-    Raises:
-        ValueError: If `season` is less than 1999.
     """
     data = pd.DataFrame()
 
