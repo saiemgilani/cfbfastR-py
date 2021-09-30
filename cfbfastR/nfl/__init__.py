@@ -1,1 +1,1 @@
-from .loaders import *
+from .nfl_loaders import *
