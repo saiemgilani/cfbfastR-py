@@ -1,3 +1,6 @@
+## 0.0.20 Release: September 30, 2021
+- Updated play-by-play method for college football to current [gameonpaper.com](https://gameonpaper.com/cfb/) version
+
 ## 0.0.13 Release: September 28, 2021
 - A corrected link and method for `load_nfl_rosters()`, no seasons argument anymore.
 
