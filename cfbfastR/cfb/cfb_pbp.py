@@ -1,5 +1,4 @@
 from numpy.core.fromnumeric import mean
-from flask import jsonify
 import pandas as pd
 import numpy as np
 import xgboost as xgb
