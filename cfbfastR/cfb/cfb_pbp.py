@@ -1104,6 +1104,20 @@ class PlayProcess(object):
             "Kickoff Return Touchdown", play_df['type.text']
         )
 
+        play_df['type.text'] = np.select(
+            [
+                (play_df['type.text'] == "Kickoff Touchdown") & (play_df.fumble_vec == False),
+                (play_df['type.text'] == "Kickoff") & (play_df['td_play'] == True) & (play_df.fumble_vec == False),
+                (play_df['type.text'] == "Kickoff") & (play_df.text.str.contains("for a TD", case=False, flags=0, na=False, regex=True)) & (play_df.fumble_vec == False),
+            ],
+            [
+                "Kickoff Return Touchdown",
+                "Kickoff Return Touchdown",
+                "Kickoff Return Touchdown"
+            ],
+            default = play_df['type.text']
+        )
+
         play_df['type.text'] = np.where(
             (play_df['type.text'].isin(["Kickoff", "Kickoff Return (Offense)"])) &
             (play_df.fumble_vec == True) & (play_df.change_of_poss == 1),
