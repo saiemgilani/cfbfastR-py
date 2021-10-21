@@ -73,7 +73,7 @@ def load_nfl_player_stats() -> pd.DataFrame:
         pd.DataFrame: Pandas dataframe containing player stats.
     """
     data = pd.DataFrame()
-    i_data = pd.read_parquet(NFL_PLAYER_STATS_URL.format(season = i), engine='auto', columns=None)
+    i_data = pd.read_parquet(NFL_PLAYER_STATS_URL, engine='auto', columns=None)
     data = data.append(i_data)
     #Give each row a unique index
     data.reset_index(drop=True, inplace=True)
