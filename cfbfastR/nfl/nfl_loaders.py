@@ -2,7 +2,7 @@ import pyarrow.parquet as pq
 import pandas as pd
 import json
 from typing import List, Callable, Iterator, Union, Optional
-from cfbfastR.config import NFL_BASE_URL, NFL_ROSTER_URL, NFL_TEAM_LOGO_URL, NFL_TEAM_SCHEDULE_URL, CFB_TEAM_INFO_URL
+from cfbfastR.config import NFL_BASE_URL, NFL_ROSTER_URL, NFL_TEAM_LOGO_URL, NFL_TEAM_SCHEDULE_URL,NFL_PLAYER_STATS_URL
 from cfbfastR.errors import SeasonNotFoundError
 from cfbfastR.dl_utils import download
 
