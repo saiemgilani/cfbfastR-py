@@ -2080,6 +2080,17 @@ class PlayProcess(object):
         play_df['opportunity_run'] =  np.where((play_df.rush == True) & (play_df.yds_rushed >= 4), True, False)
         play_df['highlight_run'] =  np.where((play_df.rush == True) & (play_df.yds_rushed >= 8), True, False)
 
+        play_df['adj_rush_yardage'] = np.select(
+            [
+                (play_df.rush == True) & (play_df.yds_rushed > 10),
+                (play_df.rush == True) & (play_df.yds_rushed <= 10)
+            ],
+            [
+                10,
+                play_df.yds_rushed
+            ],
+            default = None
+        )
         play_df['line_yards'] = np.select(
             [
                 (play_df.rush == 1) & (play_df.yds_rushed < 0),
@@ -2088,25 +2099,39 @@ class PlayProcess(object):
                 (play_df.rush == 1) & (play_df.yds_rushed >= 11)
             ],
             [
-                1.2 * play_df.yds_rushed,
-                play_df.yds_rushed,
-                0.5 * play_df.yds_rushed,
+                1.2 * play_df.adj_rush_yardage,
+                play_df.adj_rush_yardage,
+                0.5 * play_df.adj_rush_yardage,
                 0.0
             ],
             default=None
         )
 
-        play_df['highlight_yards'] = np.select(
+        play_df['second_level_yards'] = np.select(
             [
-                (play_df.rush == 1) & (play_df.yds_rushed > 4),
+                (play_df.rush == 1) & (play_df.yds_rushed >= 5),
                 (play_df.rush == 1)
             ],
             [
-                (play_df.yds_rushed - play_df.line_yards),
-                0.0
+                (0.5 * (play_df.adj_rush_yardage - 5)),
+                0
             ],
-            default=None
+            default = None
         )
+
+        play_df['open_field_yards'] = np.select(
+            [
+                (play_df.rush == 1) & (play_df.yds_rushed > 10),
+                (play_df.rush == 1)
+            ],
+            [
+                (play_df.yds_rushed - play_df.adj_rush_yardage),
+                0
+            ],
+            default = None
+        )
+
+        play_df['highlight_yards'] = play_df['second_level_yards'] + play_df['open_field_yards']
 
         play_df['opp_highlight_yards'] = np.select(
             [
@@ -2119,9 +2144,6 @@ class PlayProcess(object):
             ],
             default=None
         )
-
-        play_df['second_level_yards'] = np.where((play_df.rush == 1) & (play_df.yds_rushed >= 5) & (play_df.yds_rushed <= 10), play_df.yds_rushed, None)
-        play_df['open_field_yards'] = np.where((play_df.rush == 1) & (play_df.yds_rushed >= 11), play_df.yds_rushed, None)
 
         play_df['short_rush_success'] = np.where(
             (play_df['start.distance'] < 2) & (play_df.rush == True) & (play_df.statYardage >= play_df['start.distance']), True, False
