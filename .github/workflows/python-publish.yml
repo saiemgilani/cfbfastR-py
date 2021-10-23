@@ -21,14 +21,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install setuptools wheel twine pytest
-    - name: Run basic tests
-      run: |
-        pip install ./cfbfastR
-        pytest ./tests
     - name: Build and publish
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
-        python ./cfbfastR/setup.py sdist bdist_wheel
+        python setup.py sdist bdist_wheel
         twine upload dist/*
