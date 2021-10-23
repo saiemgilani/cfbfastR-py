@@ -8,7 +8,7 @@ from setuptools import find_packages, setup
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+with open(path.join(here, './README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -19,7 +19,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.0.25',
+    version='0.0.26',
 
     description='Retrieve American football data in Python',
     long_description=long_description,
@@ -91,6 +91,7 @@ setup(
                       'matplotlib>=2.0.0',
                       'tqdm>=4.50.0',
                       'attrs>=20.3.0',
+                      'xgboost>=1.2.0'
                       ],
 
     # List additional groups of dependencies here (e.g. development
