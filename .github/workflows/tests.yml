@@ -19,5 +19,4 @@ jobs:
         pip install setuptools pytest
     - name: Run basic tests
       run: |
-        pip install ./cfbfastR
         pytest ./tests
