@@ -2838,8 +2838,6 @@ class PlayProcess(object):
         self.plays_json['TFL_pass'] = self.plays_json['TFL_pass'].astype(float)
         self.plays_json['TFL_rush'] = self.plays_json['TFL_rush'].astype(float)
         self.plays_json['havoc'] = self.plays_json['havoc'].astype(float)
-        self.plays_json['havoc_pass'] = self.plays_json['havoc_pass'].astype(float)
-        self.plays_json['havoc_rush'] = self.plays_json['havoc_rush'].astype(float)
 
         pass_box = self.plays_json[(self.plays_json["pass"] == True) & (self.plays_json.scrimmage_play == True)]
         rush_box = self.plays_json[(self.plays_json["rush"] == True) & (self.plays_json.scrimmage_play == True)]
