@@ -31,6 +31,9 @@ wp_model.load_model(wp_spread_file)
 qbr_model = xgb.Booster({'nthread': 4})  # init model
 qbr_model.load_model(qbr_model_file)
 
+def __safe_retrieve_key__(tmp_dict, key, default_value):
+    return tmp_dict[key] if (key in tmp_dict.keys()) else default_value
+
     #---------------------------------
 class PlayProcess(object):
 
@@ -2220,15 +2223,20 @@ class PlayProcess(object):
         play_df['TFL_rush'] = np.where(
             (play_df['TFL'] == True) & (play_df['rush'] == True), True, False
         )
-        play_df['havoc'] = np.where(
-            (play_df['forced_fumble'] == True)|(play_df['int'] == True)|(play_df['TFL'] == True)|(play_df['pass_breakup'] == True),
-            True, False
-        )
-        play_df['havoc_pass'] = np.where(
-            (play_df['havoc'] == True) & (play_df['pass'] == True), True, False
-        )
-        play_df['havoc_rush'] = np.where(
-            (play_df['havoc'] == True) & (play_df['rush'] == True), True, False
+        play_df['havoc'] = np.select(
+            [
+                (play_df['pass_breakup'] == True),
+                (play_df['TFL'] == True),
+                (play_df['int'] == True),
+                (play_df['forced_fumble'] == True)
+            ],
+            [
+                True,
+                True,
+                True,
+                True
+            ],
+            default = False
         )
         return play_df
 
@@ -3120,10 +3128,12 @@ class PlayProcess(object):
         def_base_box = def_base_box.replace({np.nan:None})
 
         def_box_havoc_pass = self.plays_json[(self.plays_json.scrimmage_play == True) & (self.plays_json["pass"] == True)].groupby(by=["def_pos_team"], as_index=False).agg(
+            num_pass_plays = ('pass', sum),
             havoc_total_pass = ('havoc', sum),
             havoc_total_pass_rate = ('havoc', mean),
             sacks = ('sack', sum),
             sacks_rate = ('sack', mean),
+            pass_breakups = ('pass_breakup', sum)
         )
         def_box_havoc_pass = def_box_havoc_pass.replace({np.nan:None})
 
@@ -3160,6 +3170,14 @@ class PlayProcess(object):
                 for (label, total) in zipped_def_box_stat:
                     turnover_box_json[idx][label] = round(float(total), 2)
                     def_box_json[idx][label] = round(float(total), 2)
+
+            def_box_json[idx]["havoc"] += (__safe_retrieve_key__(def_box_json[idx], "Int", 0) + __safe_retrieve_key__(def_box_json[idx], "PD", 0) + __safe_retrieve_key__(def_box_json[idx], "TFL", 0) + __safe_retrieve_key__(def_box_json[idx], "fumbles", 0))
+            def_box_json[idx]["havoc_rate"] = float(def_box_json[idx]["havoc"]) / float(def_box_json[idx]["scrimmage_plays"])
+
+            def_box_json[idx]["havoc_total_pass"] -= __safe_retrieve_key__(def_box_json[idx], "pass_breakups", 0)
+            def_box_json[idx]["havoc_total_pass"] += __safe_retrieve_key__(def_box_json[idx], "PD", 0)
+
+            def_box_json[idx]["havoc_total_pass_rate"] = float(def_box_json[idx]["havoc_total_pass"]) / float(def_box_json[idx]["num_pass_plays"])
 
         total_fumbles = reduce(lambda x, y: x+y, map(lambda x: (x["total_fumbles"] if ("total_fumbles" in x.keys()) else 0), turnover_box_json))
 
