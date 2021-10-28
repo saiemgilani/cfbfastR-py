@@ -3163,8 +3163,12 @@ class PlayProcess(object):
                 zipped_def_box_stat = zip(def_box_stats["labels"], def_box_stats["totals"])
                 # away first, home second
                 for (label, total) in zipped_def_box_stat:
-                    turnover_box_json[idx][label] = round(float(total), 2)
-                    def_box_json[idx][label] = round(float(total), 2)
+                    if (label != "TFL"):
+                        turnover_box_json[idx][label] = round(float(total), 2)
+                        def_box_json[idx][label] = round(float(total), 2)
+                    else:
+                        turnover_box_json[idx]["TFL_ESPN"] = round(float(total), 2)
+                        def_box_json[idx]["TFL_ESPN"] = round(float(total), 2)
 
 
             def_box_json[idx]["havoc"] = (def_box_json[idx].get("Int", 0) + def_box_json[idx].get("PD", 0) + def_box_json[idx].get("TFL", 0) + def_box_json[idx].get("fumbles", 0))
