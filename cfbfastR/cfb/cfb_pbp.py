@@ -31,9 +31,6 @@ wp_model.load_model(wp_spread_file)
 qbr_model = xgb.Booster({'nthread': 4})  # init model
 qbr_model.load_model(qbr_model_file)
 
-def __safe_retrieve_key__(tmp_dict, key, default_value):
-    return tmp_dict[key] if (key in tmp_dict.keys()) else default_value
-
     #---------------------------------
 class PlayProcess(object):
 
@@ -3170,22 +3167,22 @@ class PlayProcess(object):
                     def_box_json[idx][label] = round(float(total), 2)
 
 
-            def_box_json[idx]["havoc"] = (__safe_retrieve_key__(def_box_json[idx], "Int", 0) + __safe_retrieve_key__(def_box_json[idx], "PD", 0) + __safe_retrieve_key__(def_box_json[idx], "TFL", 0) + __safe_retrieve_key__(def_box_json[idx], "fumbles", 0))
+            def_box_json[idx]["havoc"] = (def_box_json[idx].get("Int", 0) + def_box_json[idx].get("PD", 0) + def_box_json[idx].get("TFL", 0) + def_box_json[idx].get("fumbles", 0))
             def_box_json[idx]["havoc_rate"] = float(def_box_json[idx]["havoc"]) / float(def_box_json[idx]["scrimmage_plays"])
 
-            def_box_json[idx]["havoc_total_pass"] -= __safe_retrieve_key__(def_box_json[idx], "pass_breakups", 0)
-            def_box_json[idx]["havoc_total_pass"] += __safe_retrieve_key__(def_box_json[idx], "PD", 0)
+            def_box_json[idx]["havoc_total_pass"] -= def_box_json[idx].get("pass_breakups", 0)
+            def_box_json[idx]["havoc_total_pass"] += def_box_json[idx].get("PD", 0)
 
             def_box_json[idx]["havoc_total_pass_rate"] = float(def_box_json[idx]["havoc_total_pass"]) / float(def_box_json[idx]["num_pass_plays"])
 
-        total_fumbles = reduce(lambda x, y: x+y, map(lambda x: (x["total_fumbles"] if ("total_fumbles" in x.keys()) else 0), turnover_box_json))
+        total_fumbles = reduce(lambda x, y: x+y, map(lambda x: x.get("total_fumbles", 0), turnover_box_json))
 
-        away_passes_def = turnover_box_json[1]["PD"] if ("PD" in turnover_box_json[1].keys()) else 0
-        away_passes_int = turnover_box_json[0]["Int"] if ("Int" in turnover_box_json[0].keys()) else 0
+        away_passes_def = turnover_box_json[1].get("PD", 0)
+        away_passes_int = turnover_box_json[0].get("Int", 0)
         turnover_box_json[0]["expected_turnovers"] = (0.5 * total_fumbles) + (0.22 * (away_passes_def + away_passes_int))
 
-        home_passes_def = turnover_box_json[0]["PD"] if ("PD" in turnover_box_json[0].keys()) else 0
-        home_passes_int = turnover_box_json[1]["Int"] if ("Int" in turnover_box_json[1].keys()) else 0
+        home_passes_def = turnover_box_json[0].get("PD", 0)
+        home_passes_int = turnover_box_json[1].get("Int", 0)
         turnover_box_json[1]["expected_turnovers"] = (0.5 * total_fumbles) + (0.22 * (home_passes_def + home_passes_int))
 
         turnover_box_json[0]["Int"] = int(turnover_box_json[0]["Int"])
