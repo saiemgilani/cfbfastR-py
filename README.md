@@ -12,7 +12,7 @@
 
 
 
-### cfbfastR-py <a href='https://cfbfastR-py.sportsdataverse.org'><img src='https://cfbfastR-py.sportsdataverse.org/img/cfbfastR-py-logo.png' align="right" height="150" /></a>
+### cfbfastR-py <a href='https://py.sportsdataverse.org'><img src='https://raw.githubusercontent.com/saiemgilani/cfbfastR-py/master/cfbfastR-py-logo.png' align="right" height="150" /></a>
 
 
 
