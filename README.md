@@ -1,4 +1,6 @@
-# cfbfastR-py is now archived, please use [**`sportsdataverse-py`**](https://py.sportsdataverse.org) as a drop-in replacement
+# cfbfastR-py is now archived 
+
+# **Please use [**`sportsdataverse-py`**](https://py.sportsdataverse.org) as a drop-in replacement**
 
 
 
